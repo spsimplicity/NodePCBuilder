@@ -1,0 +1,133 @@
+.navWrap {
+  border-top: #16a085 solid 1px;
+  border-bottom: #d6dbdf solid 2px;
+  background-color: #eeeeee;
+}
+.navWrap .loggedOutNav,
+.navWrap .forgotPassword {
+  padding-top: 20px;
+  border-bottom: #16a085 solid 1px;
+}
+.navWrap .loggedOutNav .brand,
+.navWrap .forgotPassword .brand {
+  font-size: 24px;
+  margin-top: 5px;
+}
+.navWrap .loggedOutNav .btn-navbar,
+.navWrap .forgotPassword .btn-navbar {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.navWrap .loggedOutNav .cpgNavCollapse .nav,
+.navWrap .forgotPassword .cpgNavCollapse .nav {
+  margin-bottom: 10px;
+}
+.navWrap .loggedOutNav .cpgNavCollapse .nav li,
+.navWrap .forgotPassword .cpgNavCollapse .nav li {
+  float: left;
+  padding-left: 20px;
+}
+.navWrap .loggedOutNav .cpgNavCollapse .nav li input,
+.navWrap .forgotPassword .cpgNavCollapse .nav li input {
+  margin: 0;
+}
+.navWrap .loggedOutNav .cpgNavCollapse .nav li.register a,
+.navWrap .forgotPassword .cpgNavCollapse .nav li.register a,
+.navWrap .loggedOutNav .cpgNavCollapse .nav li.request a,
+.navWrap .forgotPassword .cpgNavCollapse .nav li.request a {
+  font-size: small;
+  clear: left;
+  padding-left: 5px;
+}
+.navWrap .loggedOutNav .cpgNavCollapse .nav li.register a:hover,
+.navWrap .forgotPassword .cpgNavCollapse .nav li.register a:hover,
+.navWrap .loggedOutNav .cpgNavCollapse .nav li.request a:hover,
+.navWrap .forgotPassword .cpgNavCollapse .nav li.request a:hover {
+  cursor: pointer;
+}
+.navWrap .loggedOutNav .cpgNavCollapse .nav li.register a.sign,
+.navWrap .forgotPassword .cpgNavCollapse .nav li.register a.sign,
+.navWrap .loggedOutNav .cpgNavCollapse .nav li.request a.sign,
+.navWrap .forgotPassword .cpgNavCollapse .nav li.request a.sign {
+  margin-left: 105px;
+}
+.adSpace {
+  margin: 20px auto 0 auto;
+  background-color: #eeeeee;
+  height: 90px;
+  width: 728px;
+}
+@media (max-width: 950px) {
+  .container {
+    width: auto;
+  }
+  .navWrap .loggedOutNav,
+  .navWrap .forgotPassword {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navWrap .loggedOutNav .btn-navbar,
+  .navWrap .forgotPassword .btn-navbar {
+    display: none;
+  }
+}
+@media (min-width: 591px) and (max-width: 767px) {
+  .navWrap .loggedOutNav .btn-navbar,
+  .navWrap .forgotPassword .btn-navbar {
+    display: block !important;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse,
+  .navWrap .forgotPassword .cpgNavCollapse {
+    overflow: hidden;
+    height: 0;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.login,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.login {
+    clear: left;
+    margin-left: 185px;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.pass,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.pass,
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.request,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.request {
+    margin-right: 40px;
+  }
+  .adSpace {
+    height: 60px;
+    width: 468px;
+  }
+}
+@media (max-width: 590px) {
+  .navWrap .loggedOutNav .btn-navbar,
+  .navWrap .forgotPassword .btn-navbar {
+    display: block !important;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse,
+  .navWrap .forgotPassword .cpgNavCollapse {
+    overflow: hidden;
+    height: 0;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.login,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.login,
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.request,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.request,
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.pass,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.pass {
+    clear: left;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.pass,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.pass {
+    margin-right: 40px;
+  }
+  .navWrap .loggedOutNav .cpgNavCollapse .nav li.request,
+  .navWrap .forgotPassword .cpgNavCollapse .nav li.request {
+    margin-right: 40px;
+    margin-left: 15px;
+  }
+  .adSpace {
+    height: 60px;
+    width: 234px;
+  }
+}
