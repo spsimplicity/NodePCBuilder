@@ -1,0 +1,1789 @@
+doctype 5
+html
+    head
+        meta(charset='utf08')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        title= title
+
+        // Loading Bootstrap
+        link(rel='stylesheet', href='/styles/lib/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='/styles/lib/bootstrap/css/bootstrap-responsive.css')
+
+        // Loading Flat UI
+        link(rel='stylesheet', href='/styles/css/flat-ui.css')
+
+        // Favicon
+        link(rel='shortcut icon', href='images/favicon.ico')
+
+        // HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.
+        //if lt IE 9
+            script(src='/js/flatUi/html5shiv.js')
+    body
+        h1.demo-headline Basic Elements
+
+        div.container
+            div.demo-row.demo-buttons
+                div.demo-title
+                    h3.demo-panel-title Button States
+
+                div.demo-col
+                    a.btn.btn-large.btn-block.btn-primary(href='#fakelink') Primary Button
+                    a.btn.btn-large.btn-block.btn-warning(href='#fakelink') Warning Button
+                    a.btn.btn-large.btn-block(href='#fakelink') Default Button
+                    a.btn.btn-large.btn-block.btn-danger(href='#fakelink') Danger Button
+
+                div.demo-col
+                    a.btn.btn-large.btn-block.btn-success(href='#fakelink') Success Button
+                    a.btn.btn-large.btn-block.btn-inverse(href='#fakelink') Inverse Button
+                    a.btn.btn-large.btn-block.btn-info(href='#fakelink') Info Button
+                    a.btn.btn-large.btn-block.disabled(href='#fakelink') Disabled Button
+
+            div.demo-row.demo-buttons
+                div.demo-title
+                    h3.demo-panel-title Button Sizes
+
+                div.demo-col
+                    a.btn.btn-huge.btn-block.btn-primary(href='#fakelink') Huge Button
+                    a.btn.btn-block.btn-primary(href='#fakelink') Default Button
+                    a.btn.btn-mini.btn-block.btn-primary(href='#fakelink') Mini Button
+
+                div.demo-col
+                    a.btn.btn-large.btn-block.btn-primary(href='#fakelink') Large Button
+                    a.btn.btn-small.btn-block.btn-primary(href='#fakelink') Small Button
+
+            div.demo-row.demo-buttons
+                div.demo-title
+                    h3.demo-panel-title Button Variants
+
+                div.demo-content
+                    a.btn.btn-huge.btn-primary(href='#fakelink')
+                        i.fui-twitter
+                        It's a
+                    a.btn.btn-huge.btn-primary.mhm(href='#fakelink') Huge
+                    a.btn.btn-huge.btn-primary(href='#fakelink') Button
+                    a.btn.btn-huge.btn-primary.mlm(href='#fakelink'): i.fui-check-inverted
+                    a.btn.btn-huge.btn-primary.btn-embossed.mlm(href='#fakelink') Embossed
+                    a.btn.btn-huge.btn-primary.btn-block(href='#fakelink')
+                        | Huge Fluid Button
+                        i.fui-arrow-right.pull-right
+
+                    a.btn.btn-large.btn-primary(href='#fakelink')
+                        i.fui-twitter
+                        It's a
+                    a.btn.btn-large.btn-primary.mhm(href='#fakelink') Large
+                    a.btn.btn-large.btn-primary(href='#fakelink') Button
+                    a.btn.btn-large.btn-primary.mlm(href='#fakelink'): i.fui-check-inverted
+                    a.btn.btn-large.btn-primary.btn-embossed.mlm(href='#fakelink') Embossed
+                    a.btn.btn-large.btn-primary.btn-block(href='#fakelink')
+                        | Large Fluid Button
+                        i.fui-arrow-right.pull-right
+
+                    a.btn.btn-primary(href='#fakelink')
+                        i.fui-twitter
+                        It's a
+                    a.btn.btn-primary.mhm(href='#fakelink') Standard
+                    a.btn.btn-primary(href='#fakelink') Button
+                    a.btn.btn-primary.mlm(href='#fakelink'): i.fui-check-inverted
+                    a.btn.btn-primary.btn-embossed.mlm(href='#fakelink') Embossed
+                    a.btn.btn-primary.btn-block(href='#fakelink')
+                        | Standard Fluid Button
+                        i.fui-arrow-right.pull-right
+
+                    a.btn.btn-small.btn-primary(href='#fakelink')
+                        i.fui-twitter
+                        It's a
+                    a.btn.btn-small.btn-primary.mhm(href='#fakelink') Small
+                    a.btn.btn-small.btn-primary(href='#fakelink') Button
+                    a.btn.btn-small.btn-primary.mlm(href='#fakelink'): i.fui-check-inverted
+                    a.btn.btn-small.btn-primary.btn-embossed.mlm(href='#fakelink') Embossed
+                    a.btn.btn-small.btn-primary.btn-block(href='#fakelink')
+                        | Small Fluid Button
+                        i.fui-arrow-right.pull-right
+
+                    a.btn.btn-mini.btn-primary(href='#fakelink')
+                        i.fui-twitter
+                        It's a
+                    a.btn.btn-mini.btn-primary.mhm(href='#fakelink') Mini
+                    a.btn.btn-mini.btn-primary(href='#fakelink') Button
+                    a.btn.btn-mini.btn-primary.mlm(href='#fakelink'): i.fui-check-inverted
+                    a.btn.btn-mini.btn-primary.btn-embossed.mlm(href='#fakelink') Embossed
+                    a.btn.btn-mini.btn-primary.btn-block(href='#fakelink')
+                        | Mini Fluid Button
+                        i.fui-arrow-right.pull-right
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Dropdowns
+
+                div.demo-col
+                    select.select-block.mbl(name='huge')
+                        optgroup(label='Profile')
+                            option(value='0') My Profile
+                            option(value='1') My Friends
+                        optgroup(label='System')
+                            option(value='2') Messages
+                            option(value='3') My Settings
+                            option.highlighted.fui-lock(value='4') Logout
+                    div.mbl
+                        select.select-block.mbl(multiple='multiple', name='huge')
+                            option(value='0') 1
+                            option(value='1', selected) 2
+                            option(value='2', selected) 3
+                            option(value='3', selected) 4
+                            option(value='4') 5
+                    div.mbl
+                        div.btn-group
+                            i.dropdown-arrow.drop-arrow-inverse
+                            button.btn.btn-primary.btn-huge Dropdown
+                            button.btn.btn-primary.btn-huge.dropdown-toggle(data-toggle='dropdown')
+                                span.caret
+                            ul.dropdown-menu.dropdown-inverse
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+
+                    select.select-block.mbl(name='info')
+                        optgroup(label='Profile')
+                            option(value='0') My Profile
+                            option(value='1') My Friends
+                        optgroup(label='System')
+                            option(value='2') Messages
+                            option(value='3') My Settings
+                            option.highlighted.fui-lock(value='4') Logout
+                    div.mbl
+                        select.select-block(multiple='multiple', name='info')
+                            option(value='0') 1
+                            option(value='1', selected) 2
+                            option(value='2', selected) 3
+                            option(value='3', selected) 4
+                            option(value='4', selected) 5
+                    div.mbl
+                        div.btn-group
+                            i.dropdown-arrow.dropdown-arrow-inverse
+                            button.btn.btn-info Dropdown
+                            button.btn.btn-info.dropdown-toggle(data-toggle='dropdown')
+                                span.caret
+                            ul.dropdown-menu.dropdown-inverse
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+
+                div.demo-col
+                    select.select-block.mbl(name='large')
+                        optgroup(label='Profile')
+                            option(value='0') My Profile
+                            option(value='1') My Friends
+                        optgroup(label='System')
+                            option(value='2') Messages
+                            option(value='3') My Settings
+                            option.highlighted.fui-lock(value='4') Logout
+                    div.mbl
+                        select.select-block(multiple='multiple', name='large')
+                            option(value='0') 1
+                            option(value='1', selected) 2
+                            option(value='2', selected) 3
+                            option(value='3', selected) 4
+                            option(value='4', selected) 5
+                    div.mbl
+                        div.btn-group
+                            i.dropdown-arrow.dropdown-arrow-inverse
+                            button.btn.btn-danger.btn-large Dropdown
+                            button.btn.btn-danger.btn-large.dropdown-toggle(data-toggle='dropdown')
+                                span.caret
+                            ul.dropdown-menu.dropdown-inverse
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+
+                    select.select-block.mbl(name='small')
+                        optgroup(label='Profile')
+                            option(value='0') My Profile
+                            option(value='1') My Friends
+                        optgroup(label='System')
+                            option(value='2') Messages
+                            option(value='3') My Settings
+                            option.highlighted.fui-lock(value='4') Logout
+                    div.mbl
+                        select.select-block(multiple='multiple', name='small')
+                            option(value='0') 1
+                            option(value='1', selected) 2
+                            option(value='2', selected) 3
+                            option(value='3', selected) 4
+                            option(value='4', selected) 5
+                    div.mbl
+                        div.btn-group
+                            i.dropdown-arrow.dropdown-arrow-inverse
+                            button.btn.btn-warning.btn-small Dropdown
+                            button.btn.btn-warning.btn-small.dropdown-toggle(data-toggle='dropdown')
+                                span.caret
+                            ul.dropdown-menu.dropdown-inverse
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+                                li: a(href='#fakelink') Sub Menu Element
+
+            div.demo-row.demo-inputs
+                div.demo-title
+                    h3.demo-panel-title Inputs
+
+                div.demo-col
+                    div.control-group.huge
+                        input.span3(type='text', value='', placeholder='Un-Active')
+                    div.control-group.large
+                        input.span3(type='text', value='', placeholder='Un-Active')
+                    div.control-group
+                        input.span3(type='text', value='', placeholder='Un-Active')
+                    div.control-group.small
+                        input.span3(type='text', value='', placeholder='Un-Active')
+                    div.control-group.error.huge
+                        input.span3(type='text', value='Error')
+                    div.control-group.error.large
+                        input.span3(type='text', value='Error')
+                    div.control-group.error
+                        input.span3(type='text', value='Error')
+                    div.control-group.error.small
+                        input.span3(type='text', value='Error')
+
+                div.demo-col
+                    div.control-group.success.huge
+                        input.span3(type='text', value='Success')
+                        i.input-icon.fui-check-inverted
+                    div.control-group.success.large
+                        input.span3(type='text', value='Success')
+                        i.input-icon.fui-check-inverted
+                    div.control-group.success
+                        input.span3(type='text', value='Success')
+                        i.input-icon.fui-check-inverted
+                    div.control-group.success.small
+                        input.span3(type='text', value='Success')
+                        i.input-icon.fui-check-inverted
+                    div.control-group.disabled.huge
+                        input.span3(type='text', value='Disabled', disabled='disabled')
+                        i.input-icon.fui-lock
+                    div.control-group.disabled.large
+                        input.span3(type='text', value='Disabled', disabled='disabled')
+                        i.input-icon.fui-lock
+                    div.control-group.disabled
+                        input.span3(type='text', value='Disabled', disabled='disabled')
+                        i.input-icon.fui-lock
+                    div.control-group.disabled.small
+                        input.span3(type='text', value='Disabled', disabled='disabled')
+                        i.input-icon.fui-lock
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Input Variants
+
+                div.demo-col
+                    div.control-group.huge
+                        div.input-append
+                            input.span2(id='appendedInputButton-01', type='text', placeholder='Search')
+                            button.btn.btn-huge(type='button'): span.fui-search
+
+                    div.control-group.large
+                        div.input-append
+                            input.span2(id='appendedInputButton-02', type='text', placeholder='Search')
+                            button.btn.btn-large(type='button'): span.fui-search
+
+                    div.control-group
+                        div.input-append
+                            input.span2(id='appendedInputButton-03', type='text', placeholder='Search')
+                            div.btn-group
+                                button.btn(type='button'): span.fui-search
+                                button.btn(type='button'): span.fui-gear
+
+                    div.control-group.small
+                        div.input-append
+                            input.span2(id='appendedInputButton-04', type='text', placeholder='Search')
+                            button.btn.btn-small(type='button'): span.fui-search
+
+                    div.control-group.huge
+                        div.input-prepend
+                            span.add-on @
+                            input.span2(id='prependedInput-01', type='text', placeholder='twitter')
+
+                    div.control-group.large
+                        div.input-prepend
+                            span.add-on @
+                            input.span2(id='prependedInput-02', type='text', placeholder='twitter')
+
+                    div.control-group
+                        div.input-prepend
+                            span.add-on @
+                            input.span2(id='prependedInput-03', type='text', placeholder='twitter')
+
+                    div.control-group.small
+                        div.input-prepend
+                            span.add-on @
+                            input.span2(id='prependedInput-04', type='text', placeholder='twitter')
+
+                    div.control-group
+                        div.input-prepend.input-datepicker
+                            button.btn(type='button'): span.fui-calendar
+                            input.span2(id='datepicker-01', type='text', value='14 March, 2013')
+
+                    div.control-group
+                        input.spinner(type='text', id='spinner-01', placeholder='', value='0')
+
+                div.demo-col
+                    form.form-search
+                        div.input-append
+                            input.span2.search-query(type='text', placeholder='Search', id='search-query-1')
+                            button.btn(type='submit'): span.fui-search
+
+                    form.form-search
+                        div.input-prepend
+                            button.btn.btn-huge(type='submit'): span.fui-search
+                            input.span2.huge.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-2')
+
+                    form.form-search
+                        div.input-prepend
+                            button.btn.btn-large(type='submit'): span.fui-search
+                            input.span2.large.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-3')
+
+                    form.form-search
+                        div.input-prepend
+                            button.btn(type='submit'): span.fui-search
+                            input.span2.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-4')
+
+                    form.form-search
+                        div.input-append
+                            input.span2.huge.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-5')
+                            button.btn.btn-huge(type='submit'): span.fui-search
+
+                    form.form-search
+                        div.input-append
+                            input.span2.large.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-6')
+                            button.btn.btn-large(type='submit'): span.fui-search
+
+                    form.form-search
+                        div.input-append
+                            input.span2.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-7')
+                            button.btn(type='submit'): span.fui-search
+
+                    form.form-search
+                        div.input-append
+                            input.span2.small.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-8')
+                            button.btn.btn-small(type='submit'): span.fui-search
+
+                    form.form-search
+                        div.input-prepend
+                            button.btn.btn-small(type='submit'): span.fui-search
+                            input.span2.small.search-query.search-query-rounded(type='text', placeholder='Search', id='search-query-9')
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Textarea
+
+                div.last-col
+                    div.demo-col
+                        textarea.span6(rows='3', placeholder='Add comment...')
+                    div.demo-col
+                        textarea.span6(rows='3') Some text inside small textarea. This is only for paddings and line-height sample
+                    div.demo-content.ptl
+                        textarea.span12(rows='3', placeholder='Add comment..')
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Tags
+
+                div.demo-content
+                    input.tagsinput.tagsinput-primary(name='tagsinput', value='Clean,Fresh,Modern,Unique')
+                    input.tagsinput(name='tagsinput', value='School,Teacher,Colleague')
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Labels
+
+                div.demo-content
+                    div.mbm.pbs.demo-inline
+                        span.label.label-small Default
+                        span.label.label-small.label-primary Primary
+                        span.label.label-small.label-important Important
+                        span.visible-desktop
+                            span.label.label-small.label-success Success
+                            span.label.label-small.label-warning Warning
+                            span.label.label-small.label-info Info
+                            span.label.label-small.label-inverse Inverse
+
+                    div.mbm.pbs.demo-inline
+                        span.label. Default
+                        span.label.label-primary Primary
+                        span.label.label-important Important
+                        span.visible-desktop
+                            span.label.label-success Success
+                            span.label.label-warning Warning
+                            span.label.label-info Info
+                            span.label.label-inverse Inverse
+
+                    div.demo-inline
+                        span.label.label-large Default
+                        span.label.label-large.label-primary Primary
+                        span.label.label-large.label-important Important
+                        span.visible-desktop
+                            span.label.label-large.label-success Success
+                            span.label.label-large.label-warning Warning
+                            span.label.label-large.label-info Info
+                            span.label.label-large.label-inverse Inverse
+
+            div.demo-row
+                h3.demo-title
+                    | Checkboxes &
+                    br
+                    | Radio-buttons
+
+                div.demo-col
+                    label.checkbox(for='checkbox1')
+                        input#checkbox1(type='checkbox', value='', data-toggle='checkbox')
+                        | Unchecked
+
+                    labal.checkbox(for='checkbox2')
+                        input#checkbox2(type='checkbox', checked='checked', value='', data-toggle='checkbox')
+                        | Checked
+
+                    label.checkbox(for='checkbox3')
+                        input#checkbox3(type='checkbox', value='', data-toggle='checkbox', disabled='')
+                        | Disabled unchecked
+
+                    label.checkbox(for='checkbox4')
+                        input#checkbox4(type='checkbox', checked='checked', value='', data-toggle='checkbox', disabled='')
+                        | Disabled checked
+
+                div.demo-col
+                    label.radio
+                        input#optionsRadios1(type='radio', name='optionsRadios', value='option1', data-toggle='radio')
+                        | Radio is off
+
+                    label.radio
+                        input#optionsRadios2(type='radio', name='optionsRadios', value='option1', data-toggle='radio', checked='')
+                        | Radio is on
+
+                    label.radio
+                        input#optionsRadios3(type='radio', name='optionsRadiosDisabled', value='option2', data-toggle='radio', disable='')
+                        | Disabled radio is off
+
+                    label.radio
+                        input#optionsRadios4(type='radio', name='optionsRadiosDisabled', value='option2', data-toggle='radio', checked='', disabled='')
+                        | Disabled radio is on
+
+            div.demo-row
+                h3.demo-title Custom color
+
+                div.demo-col
+                    label.checkbox.primary(for='checkbox5')
+                        input#checkbox5(type='checkbox', value='', data-toggle='checkbox')
+                        | Unchecked
+
+                    label.checkbox.primary(for='checkbox6')
+                        input#checkbox6(type='checkbox', checked='checked', value='', data-toggle='checkbox')
+                        | Checked
+
+                    label.checkbox.primary(for='checkbox7')
+                        input#checkbox7(type='checkbox', value='', data-toggle='checkbox', disabled='')
+                        | Disabled unchecked
+
+                    label.checkbox.primary(for='checkbox8')
+                        input#checkbox8(type='checkbox', checked='checked', value='', data-toggle='checkbox', disabled='')
+                        | Disabled checked
+
+                div.demo-col
+                    label.radio.primary
+                        input#optionsRadios5(type='radio', name='optionsRadios2', value='option1', data-toggle='radio')
+                        | Radio is off
+
+                    label.radio.primary
+                        input#optionsRadios6(type='radio', name='optionsRadios2', value='options1', data-toggle='radio', checked='')
+                        | Radio is on
+
+                    label.radio.primary
+                        input#optionsRadios7(type='radio', name='optionsRadiosDisabled2', value='option2', data-toggle='radio', disabled='')
+                        | Disabled radio is off
+
+                    label.radio.primary
+                        input#optionsRadios8(type='radio', name='optionsRadiosDisabled2', value='option2', data-toggle='radio', checked='', disabled='')
+                        | Disabled radio is on
+
+            div.demo-row
+                h3.demo-title Switches
+
+                div.last-col
+                    div.demo-col
+                        input(type='checkbox', checked='', data-toggle='switch')
+
+                    div.demo-col
+                        input(type='checkbox', data-toggle='switch')
+
+                    div.demo-col.ptl
+                        div.switch.switch-square(data-on-label='<i class="fui-check"></i>', data-off-label='<i class="fui-cross"></i>')
+                            input(type='checkbox')
+
+                    div.demo-col.ptl
+                        div.switch.switch-square(data-on-label='<i class="fui-check"></i>', data-off-label='<i class="fui-cross"></i>')
+                            input(type='checkbox', checked)
+
+                    div.demo-col.ptl
+                        input(type='checkbox', disabled, data-toggle='switch')
+
+                    div.demo-col.ptl
+                        input(type='checkbox', checked, disabled, data-toggle='switch')
+
+            div.demo-row.demo-navigation
+                div.demo-title
+                    h3.demo-panel-title Navigation
+
+                div.demo-content
+                    div.row-fluid
+                        div.pull-left.mrl
+                            ul.pager
+                                li.previous
+                                    a(href='#fakelink')
+                                        i.fui-arrow-left
+                                        span All messages
+                                li.next
+                                    a(href='#fakelink')
+                                        i.fui-arrow-right
+
+                        div.pull-left.mll.pvm
+                            div.btn-toolbar
+                                div.btn-group
+                                    a.btn.btn-primary(href='#fakelink'): i.fui-list-columned
+                                    a.btn.btn-primary(href='#fakelink'): i.fui-list-numbered
+                                    a.btn.btn-primary.active(href='#fakelink'): i.fui-list-thumbnailed
+                                    a.btn.btn-primary(href='#fakelink'): i.fui-list-small-thumbnails
+
+                    div.mbl.pbm
+                        ul.nav.nav-pills
+                            li.active: a(href='#fakelink') Popular
+                            li: a(href='#fakelink') Newest
+                            li: a(href='#fakelink') Bestselling
+
+                    div.mbl
+                        div.pagination
+                            ul
+                                li.previous: a.fui-arrow-left(href='#fakelink')
+                                li.active: a(href='#fakelink') 1
+                                li.active: a(href='#fakelink') 2
+                                li.active: a(href='#fakelink') 3
+                                li.active: a(href='#fakelink') 4
+                                li.active: a(href='#fakelink') 5
+                                li.active: a(href='#fakelink') 6
+                                li.active: a(href='#fakelink') 7
+                                li.active: a(href='#fakelink') 8
+                                li.active: a(href='#fakelink') 9
+                                li.active: a(href='#fakelink') 10
+                                li.pagination-dropdown.dropup
+                                    i.dropdown-arrow
+                                    a.dropdown-toggle(href='#fakelink', data-toggle='dropdown')
+                                        i.fui-triangle-up
+                                    ul.dropdown-menu
+                                        li: a(href='#fakelink') 10&ndash;20
+                                        li: a(href='#fakelink') 20&ndash;30
+                                        li: a(href='#fakelink') 40&ndash;50
+                                li.next: a.fui-arrow-right(href='#fakelink')
+
+                    div.mbl.pbm
+                        div.pagination.pagination-minimal
+                            ul
+                                li.previous: a.fui-arrow-left(href='#fakelink')
+                                li.active: a(href='#fakelink') 1
+                                li: a(href='#fakelink') 2
+                                li: a(href='#fakelink') 3
+                                li: a(href='#fakelink') 4
+                                li: a(href='#fakelink') 5
+                                li: a(href='#fakelink') 6
+                                li: a(href='#fakelink') 7
+                                li: a(href='#fakelink') 8
+                                li: a(href='#fakelink') 9
+                                li: a(href='#fakelink') 10
+                                li: a(href='#fakelink') 11
+                                li: a(href='#fakelink') 12
+                                li.next: a.fui-arrow-right(href='#fakelink')
+
+                        ul.pagination-plain
+                            li.previous: a(href='#fakelink') &larr; Previous
+                            li: a(href='#fakelink') 1
+                            li: a(href='#fakelink') 2
+                            li: a(href='#fakelink') 3
+                            li: a(href='#fakelink') 4
+                            li.active: a(href='#fakelink') 5
+                            li: a(href='#fakelink') 6
+                            li: a(href='#fakelink') 7
+                            li: a(href='#fakelink') 8
+                            li: a(href='#fakelink') 9
+                            li: a(href='#fakelink') 10
+                            li.next: a(href='#fakelink') Newer &rarr;
+
+                    div.mbl
+                        div.pagination.pagination-danger
+                            a.btn.btn-danger.previous(href='#fakelink')
+                                i.fui-arrow-left
+                                | OLDER
+                            ul
+                                li: a(href='#fakelink') 1
+                                li: a(href='#fakelink') 2
+                                li: a(href='#fakelink') 3
+                                li: a(href='#fakelink') 4
+                                li: a(href='#fakelink') 5
+                            a.btn.btn-danger.next(href='#fakelink')
+                                | NEWER
+                                i.fui-arrow-right
+
+                    div.mbl
+                        div.pagination.pagination-success
+                            a.btn.btn-success.previous(href='#fakelink')
+                                i.fui-arrow-left
+                                | OLDER
+                            ul
+                                li: a(href='#fakelink') 1
+                                li: a(href='#fakelink') 2
+                                li: a(href='#fakelink') 3
+                                li: a(href='#fakelink') 4
+                                li: a(href='#fakelink') 5
+                            a.btn.btn-success.next(href='#fakelink')
+                                | NEWER
+                                i.fui-arrow-right
+
+                    div.mbl
+                        div.pagination.pagination-warning
+                            a.btn.btn-warning.previous(href='#fakelink')
+                                i.fui-arrow-left
+                                | OLDER
+                            ul
+                                li: a(href='#fakelink') 1
+                                li: a(href='#fakelink') 2
+                                li: a(href='#fakelink') 3
+                                li: a(href='#fakelink') 4
+                                li: a(href='#fakelink') 5
+                            a.btn.btn-warning.next(href='#fakelink')
+                                | NEWER
+                                i.fui-arrow-right
+
+                    div.mbl
+                        div.pagination.pagination-info
+                            a.btn.btn-info.previous(href='#fakelink')
+                                i.fui-arrow-left
+                                | OLDER
+                            ul
+                                li: a(href='#fakelink') 1
+                                li: a(href='#fakelink') 2
+                                li: a(href='#fakelink') 3
+                                li: a(href='#fakelink') 4
+                                li: a(href='#fakelink') 5
+                            a.btn.btn-info.next(href='#fakelink')
+                                | NEWER
+                                i.fui-arrow-right
+
+                    div.mbl
+                        div.pagination.pagination-inverse
+                            a.btn.btn-inverse.previous(href='#fakelink')
+                                i.fui-arrow-left
+                                | OLDER
+                            ul
+                                li: a(href='#fakelink') 1
+                                li: a(href='#fakelink') 2
+                                li: a(href='#fakelink') 3
+                                li: a(href='#fakelink') 4
+                                li: a(href='#fakelink') 5
+                            a.btn.btn-inverse.next(href='#fakelink')
+                                | NEWER
+                                i.fui-arrow-right
+
+            div.demo-row.demo-tabs
+                div.demo-title
+                    h3.demo-panel-title Tabs
+
+                div.demo-content
+                    ul.nav.nav-tabs
+                        li.active: a(href='#') Popular
+                        li: a(href='#') Newest
+                        li: a(href='#') Bestselling
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                | Dropdown
+                                b.caret
+                            ul.dropdown-menu
+                                li: a(href='#tab2') Newest
+                                li: a(href='#tab3') Bestselling
+
+                    ul.nav.nav-tabs.nav-append-content
+                        li.active: a(href='#tab1') Popular
+                        li: a(href='#tab2') Newest
+                        li: a(href='#tab3') Bestselling
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                | Dropdown
+                                b.caret
+                            ul.dropdown-menu
+                                li: a(href='#tab2') Newest
+                                li: a(href='#tab3') Bestselling
+
+                    div.tab-content
+                        div.tab-pane.active#tab1
+                            p I'm in Section 1.
+
+                        // /tabs
+                        div.tab-pane#tab2
+                            p Howdy, I'm in Section 2.
+
+                        // /tabs
+                        div.tab-pane#tab3
+                            p Howdy, I'm in Section 3.
+
+                    div.mvl.pvl
+                        div.tabbable.tabs-left
+                            ul.nav.nav-tabs.nav-append-content
+                                li: a(href='#tab4') Popular
+                                li.active: a(href='#tab5') Newest
+                                li: a(href='#tab6') Bestselling
+                                li.dropdown
+                                    a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                        | Dropdown
+                                        b.caret
+                                    ul.dropdown-menu
+                                        li: a(href='#tab5') Newest
+                                        li: a(href='#tab6') Bestselling
+                            div.tab-content
+                                div.tab-pane#tab4
+                                    p I'm in Section 1.
+                                div.tab-pane.active#tab5
+                                    p Howdy, I'm in Section 2.
+                                div.tab-pane#tab6
+                                    p Howdy, I'm in Section 3.
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Icon Bars
+
+                div.demo-content
+                    div.iconbar
+                        ul
+                            li.active: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-success
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li.active: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-danger
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li.active: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-warning
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li.active: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-info
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li.active
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-horizontal
+                        ul
+                            li.active: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-horizontal.iconbar-success
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li.active: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-horizontal.iconbar-danger
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li.active: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-horizontal.iconbar-warning
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li.active: a.fui-mail(href='#fakelink')
+                            li
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+                    div.iconbar.iconbar-horizontal.iconbar-info
+                        ul
+                            li: a.fui-user(href='#fakelink')
+                            li: a.fui-calendar(href='#fakelink')
+                            li: a.fui-chat(href='#fakelink')
+                            li: a.fui-mail(href='#fakelink')
+                            li.active
+                                a.fui-gear(href='#fakelink')
+                                    span.iconbar-unread 1
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Breadcrumbs
+
+                div.demo-content
+                    ul.breadcrumb
+                        li: a(href='#fakelink') Home
+                        li: a(href='#fakelink') Directory
+                        li.active: a(href='#')Current Article
+
+                    div.breadcrumb-text
+                        h4.caption Shop
+                        p
+                            a.text-primary(href='#fakelink') House
+                            a.text-info(href='#fakelink') Bedroom
+                            a.text-warning(href='#fakelink') Bed
+                            a.text-danger(href='#fakelink') Decor
+                            | A-Z
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Progress bars &amp; Sliders
+
+                div.demo-content
+                    div.progress
+                        div.bar(style='width: 45%')
+                    br
+                    div.progress
+                        div.bar(style='width: 40%')
+                        div.bar.bar-warning(style='width: 10%')
+                        div.bar.bar-danger(style='width: 10%')
+                        div.bar.bar-success(style='width: 10%')
+                        div.bar.bar-info(style='width: 10%')
+                    br
+                    div.ui-slider#slider
+                    br
+                    div.ui-slider#slider2
+                    div.ui-slider#slider3
+                        span.ui-slider-value.first $500
+                        span.ui-slider-value.last $1000
+
+            div.demo-row
+                div.demo-title
+                    h3.demo-panel-title Tooltips &amp; Popovers
+
+                div.demo-col
+                    div.demo-tooltips
+                        p(data-toggle='tooltip', data-placement='bottom', data-tooltip-style='light', title='Hello, Im the tooltip')
+                    div.demo-popovers
+                        div.popover.right
+                            div.arrow
+                            h3.popover-title Smooth Title
+                            div.popover-content
+                                p
+                                    | And here's some amazing content. It's very engaging.
+                                    br
+                                    | Right?
+
+                div.demo-col
+                    div.demo-tooltips
+                        p(data-toggle='tooltip', title='Here is a sample of a long dark tooltip. Hell yeah.')
+                    div.demo-popovers
+                        div.popover.left
+                            div.arrow
+                            h3.popover-title Smooth Title
+                            div.popover-content
+                                p
+                                    | And here's some amazing content. It's very engaging.
+                                    br
+                                    | Right?
+
+            div.demo-row.demo-social-buttons
+                h3.demo-title Social Buttons
+
+                div.demo-col
+                    a.btn.btn-small.btn-social-googleplus(href='#fakelink')
+                        i.fui-googleplus
+                        | Connect with Google
+                    a.btn.btn-small.btn-social-facebook(href='#fakelink')
+                        i.fui-facebook
+                        | Connect with Facebook
+                    a.btn.btn-small.btn-social-twitter(href='#fakelink')
+                        i.fui-twitter
+                        | Connect with Twitter
+
+                div.demo-col
+                    a.btn.btn-small.btn-social-pinterest
+                        i.fui-pinterest
+                        | Pin It
+                        span.btn-tip 100
+                    a.btn.btn-small.btn-social-linkedin
+                        i.fui-linkedin
+                        | Share
+                        span.btn-tip 91
+                    a.btn.btn-small.btn-social-stumbleupon
+                        i.fui-stumbleupon
+                        | Stumble
+                        span.btn-tip 45
+
+            div.demo-row
+                h3.demo-title Nav Lists
+
+                div.demo-col
+                    ul.nav.nav-list
+                        li.nav-header Subjects
+                        li
+                            a(href='#fakelink')
+                                | UX Design
+                                span.nav-counter 19
+                        li.active
+                            a(href='#fakelink')
+                                | Photography
+                                span.nav-counter 130
+                        li
+                            a(href='#fakelink')
+                                | Art
+                                span.nav-counter 9
+                        li.divider
+                        li.nav-header Condition
+                        li
+                            a(href='#fakelink')
+                                | Brand new
+                                span.nav-counter 69
+                        li
+                            a(href='#fakelink')
+                                | Read-used
+                                span.nav-counter 21
+                        li
+                            a(href='#fakelink')
+                                | Work-used
+                                span.nav-counter 40
+
+                div.demo-col
+                    ul.nav.nav-list.nav-list.vivid
+                        li.nav-header Europe
+                        li
+                            a(href='#fakelink')
+                                | London, United Kingdom
+                                span.nav-counter 19
+                        li.active
+                            a(href='#fakelink')
+                                | Berlin, Germany
+                                span.nav-counter 130
+                        li
+                            a(href='#fakelink')
+                                | Mardid, Spain
+                                span.nav-counter 9
+                        li.divider
+                        li.nav-header Condition
+                        li
+                            a(href='#fakelink')
+                                | Shanghai, China
+                                span.nav-counter 69
+                        li
+                            a(href='#fakelink')
+                                | Bombay, India
+                                span.nav-counter 21
+                        li
+                            a(href='#fakelink')
+                                | Karachi, Pakistan
+                                span.nav-counter 40
+
+            div.demo-row
+                h3.demo-title Alerts
+
+                div.demo-content
+                    // Alert Info
+                    div.alert.alert-info
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        | Your computer restarted
+                        a(href='#fakelink') because of a problem
+                        | . Sorry for any inconvenience and appreciate your patience.
+
+                    div.alert.alert-info
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        h3 Information Label
+                        p
+                            | An error message is information displayed when an
+                            a(href='#fakelink') unexpected condition occurs
+                            | , usually on a computer or other device. On modern operating systems with graphical
+                            | user interfaces, error messages are often displayed using dialog boxes.
+                        a.btn.btn-info.btn-wide(href='#fakelink') Turn it off now
+                        a.btn.btn-wide(href='#fakelink') It’s ok
+
+                    // Alert Error
+                    div.alert.alert-error
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        | Your computer restarted
+                        a(href='#fakelink') because of a problem
+                        | . Sorry for any inconvenience and appreciate your patience.
+
+                    div.alert.alert-error
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        h3 Error: The change you wanted was rejected.
+                        p
+                            | An error message is information displayed when an
+                            a(href='#fakelink') unexpected condition occurs
+                            | , usually on a computer or other device. On modern operating systems with graphical
+                            | user interfaces, error messages are often displayed using dialog boxes.
+                        a.btn.btn-danger.btn-wide(href='#fakelink') Turn it off now
+                        a.btn.btn-wide(href='#fakelink') It’s ok
+
+                    // Alert Success
+                    div.alert.alert-success
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        | Your computer restarted
+                        a(href='#fakelink') because of a problem
+                        | . Sorry for any inconvenience and appreciate your patience.
+
+                    div.alert.alert-success
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        h3 Disc space was extended twice. It's ok?
+                        p
+                            | An error message is information displayed when an
+                            a(href='#fakelink') unexpected condition occurs
+                            | , usually on a computer or other device. On modern operating systems with graphical
+                            | user interfaces, error messages are often displayed using dialog boxes.
+                        a.btn.btn-primary.btn-wide(href='#fakelink'): i.fui-check-inverted Hurray!
+                        a.btn.btn-info.btn-wide(href='#fakelink') Share on twitter
+
+                    // Alert Default
+                    div.alert
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        | Your computer restarted
+                        a(href='#fakelink') because of a problem
+                        | . Sorry for any inconvenience and appreciate your patience.
+
+                    div.alert
+                        button.close.fui-cross(type='button', data-dismiss='alert')
+                        h3 Hey, some problems on our servers.
+                        p
+                            | An error message is information displayed when an
+                            a(href='#fakelink') unexpected condition occurs
+                            | , usually on a computer or other device. On modern operating systems with graphical
+                            | user interfaces, error messages are often displayed using dialog boxes.
+                        a.btn.btn-warning.btn-wide(href='#fakelink') Fix it
+                        a.btn.btn-wide(href='#fakelink') Okey, no probs!
+
+            div.demo-row
+                h3.demo-title Glyphs
+                    small (52)
+
+                div.demo-content.demo-icons
+                    span.fui-info
+                    span.fui-alert
+                    span.fui-question
+                    span.fui-window
+                    span.fui-windows
+                    span.fui-upload
+                    span.fui-arrow-right
+                    span.fui-arrow-left
+                    span.fui-loop
+                    span.fui-cmd
+                    span.fui-mic
+                    span.fui-export
+                    span.fui-check-inverted
+                    span.fui-heart
+                    span.fui-location
+                    span.fui-plus
+                    span.fui-check
+                    span.fui-cross
+                    span.fui-list
+                    span.fui-new
+                    span.fui-video
+                    span.fui-photo
+                    span.fui-volume
+                    span.fui-time
+                    span.fui-eye
+                    span.fui-chat
+                    span.fui-home
+                    span.fui-search
+                    span.fui-user
+                    span.fui-mail
+                    span.fui-lock
+                    span.fui-power
+                    span.fui-star
+                    span.fui-calendar
+                    span.fui-gear
+                    span.fui-book
+                    span.fui-exit
+                    span.fui-trash
+                    span.fui-folder
+                    span.fui-bubble
+                    span.fui-cross-inverted
+                    span.fui-plus-inverted
+                    span.fui-calendar-solid
+                    span.fui-star-2
+                    span.fui-credit-card
+                    span.fui-clip
+                    span.fui-link
+                    span.fui-pause
+                    span.fui-play
+                    span.fui-tag
+                    span.fui-document
+                    span.fui-image
+
+            div.demo-row
+                h3.demo-title
+                    | Additional
+                    small (16)
+
+                div.demo-content.demo-icons
+                    span.fui-triangle-up
+                    span.fui-triangle-up-small
+                    span.fui-triangle-right-large
+                    span.fui-triangle-left-large
+                    span.fui-triangle-down
+                    span.fui-triangle-down-small
+                    span.fui-radio-unchecked
+                    span.fui-radio-checked
+                    span.fui-checkbox-unchecked
+                    span.fui-checkbox-checked
+                    span.fui-list-thumbnailed
+                    span.fui-list-small-thumbnails
+                    span.fui-list-numbered
+                    span.fui-list-large-thumbnails
+                    span.fui-list-columned
+                    span.fui-list-bulleted
+
+            div.demo-row
+                h3.demo-title
+                    | Social
+                    small (16)
+
+                div.demo-content.demo-icons
+                    span.fui-facebook
+                    span.fui-youtube
+                    span.fui-vimeo
+                    span.fui-twitter
+                    span.fui-stumbleupon
+                    span.fui-spotify
+                    span.fui-skype
+                    span.fui-pinterest
+                    span.fui-path
+                    span.fui-myspace
+                    span.fui-linkedin
+                    span.fui-googleplus
+                    span.fui-dribbble
+                    span.fui-blogger
+                    span.fui-behance
+                    span.fui-flat
+
+            div.demo-row
+                h3.demo-title Tables
+
+                div.demo-content-wide
+                    table.table.table-striped
+                        tr
+                            th Rank
+                            th Name
+                            th Year
+                            th Rating
+                            th Votes
+                            th &nbsp;
+                        tr
+                            td 1
+                            td The Shawshank Redemption
+                            td 1994
+                            td 9.2
+                            td 923,629
+                            td: i.fui-check-inverted.text-primary
+                        tr
+                            td 2
+                            td The Godfather
+                            td 1972
+                            td 9.2
+                            td 663,133
+                            td: i.fui-cross-inverted.text-primary
+                        tr
+                            td 3
+                            td The Godfather: Part II
+                            td 1974
+                            td 9.0
+                            td 427,132
+                            td: i.fui-cross-inverted.text-primary
+                        tr
+                            td 4
+                            td Pulp Fiction
+                            td 1994
+                            td 8.9
+                            td 719,280
+                            td: i.fui-check-inverted.text-primary
+                        tr
+                            td 5
+                            td The Good, the Bad and the Ugly
+                            td 1966
+                            td 8.9
+                            td 218,887
+                            td: i.fui-check-inverted.text-primary
+
+            div.demo-row
+                div.demo-content-wide
+                    table.table.table-striped.table-hover
+                        thead
+                            tr
+                                th Rank
+                                th Name
+                                th Year
+                                th Rating
+                                th Votes
+                        tbody
+                            tr
+                                td 1
+                                td The Shawshank Redemption
+                                td 1994
+                                td 9.2
+                                td 923,629
+                            tr
+                                td 2
+                                td The Godfather
+                                td 1972
+                                td 9.2
+                                td 663,133
+                            tr
+                                td 3
+                                td The Godfather: Part II
+                                td 1974
+                                td 9.0
+                                td 427,132
+                            tr
+                                td 4
+                                td Pulp Fiction
+                                td 1994
+                                td 8.9
+                                td 719,280
+                            tr
+                                td 5
+                                td The Good, the Bad and the Ugly
+                                td 1966
+                                td 8.9
+                                td 218,887
+
+            div.demo-row
+                div.demo-content-wide
+                    table.table.table-bordered
+                        thead
+                            tr
+                                th
+                                    label.checkbox.no-label.toggle-all(for='checkbox-table-1')
+                                        input#checkbox-table-1(type='checkbox', value='', data-toggle='checkbox')
+                                th Rank
+                                th Name
+                                th Genre
+                                th Votes
+                                th Year
+                                th Rating
+                        tbody
+                            tr
+                                td
+                                    label.checkbox.no-label(for='checkbox-table-2')
+                                        input#checkbox-table-2(type='checkbox', value='', data-toggle='checkbox')
+                                td 1
+                                td The Shawshank Redemption
+                                td Crime, Drama
+                                td 923,629
+                                td 1994
+                                td 9.2
+                            tr
+                                td
+                                    label.checkbox.no-label(for='checkbox-table-3')
+                                        input#checkbox-table-3(type='checkbox', checked='checked', value='', data-toggle='checkbox')
+                                td 2
+                                td The Godfather
+                                td Crime, Drama
+                                td 663,133
+                                td 1972
+                                td 9.2
+                            tr
+                                td
+                                    label.checkbox.no-label(for='checkbox-table-4')
+                                        input#checkbox-table-4(type='checkbox', checked='checked', value='', data-toggle='checkbox')
+                                td 3
+                                td The Godfather: Part II
+                                td Crime, Drama
+                                td 427,132
+                                td 1974
+                                td 9.0
+                            tr
+                                td
+                                    label.checkbox.no-label(for='checkbox-table-5')
+                                        input#checkbox-table-5(type='checkbox', value='', data-toggle='checkbox')
+                                td 4
+                                td Pulp Fiction
+                                td Crime, Drama
+                                td 719,280
+                                td 1994
+                                td 8.9
+                            tr
+                                td
+                                    label.checkbox.no-label(for='checkbox-table-5')
+                                        input#checkbox-table-5(type='checkbox', value='', data-toggle='checkbox')
+                                td 5
+                                td The Good, the Bad and the Ugly
+                                td Adventure, Western
+                                td 218,887
+                                td 1966
+                                td 8.9
+
+            div.demo-row.pbn
+                h3.demo-title.mbl.pbm Top Menus
+
+                div.demo-content-wide
+                    div.navbar
+                        div.navbar-inner
+                            div.container
+                                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='#nav-collapse-01')
+                                a.brand.fui-flat(href='#fakelink')
+                                div.nav-collapse#nav-collapse-01
+                                    ul.nav
+                                        li.active: a(href='#fakelink') Products
+                                        li: a(href='#fakelink') Features
+                                        li: a(href='#fakelink') Pricing
+                                        li: a(href='#fakelink') About
+
+                                    form.navbar-search.form-search.pull-right(action='')
+                                        div.input-append
+                                            input.search-query.span2(type='text', placeholder='Search')
+                                            button.btn.btn-large(type='submit')
+                                                i.fui-search
+
+                    div.navbar
+                        div.navbar-inner
+                            div.container
+                                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='#nav-collapse-02')
+                                a.brand.fui-flat(href='#fakelink')
+                                div.nav-collapse.collapse#nav-collapse-02
+                                    form.navbar-search.form-search.pull-right(action='')
+                                        div.input-append
+                                            input.search-query.span2(type='text', placeholder='Search')
+                                            button.btn.btn-large(type='submit')
+                                                i.fui-search
+
+                                    ul.nav.pull-right
+                                        li.active
+                                            a(href='#fakelink')
+                                                span.fui-user
+                                                span.hidden-desktop My Account
+                                        li
+                                            a(href='#fakelink')
+                                                span.fui-mail
+                                                span.hidden-desktop Messages
+                                                span.navbar-new 1
+                                        li
+                                            a(href='#fakelink')
+                                                span.fui-gear
+                                                span.hidden-desktop Settings
+
+                    div.navbar.navbar-inverse
+                        div.navbar-inner
+                            div.container
+                                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='#nav-collapse-03')
+                                a.brand(href='#fakelink') Flat UI
+                                div.nav-collapse.collapse#nav-collapse-03
+                                    ul.nav
+                                        li
+                                            a(href='#fakelink')
+                                                | Menu Item
+                                                span.navbar-unread 1
+                                        li.active
+                                            a(href='#fakelink')
+                                                | Messages
+                                                span.navbar-unread 1
+                                            ul
+                                                li: a(href='#fakelink') Element One
+                                                li
+                                                  a(href='#fakelink') Sub menu
+                                                  ul
+                                                    li: a(href='#fakelink') Element One
+                                                    li: a(href='#fakelink') Element Two
+                                                    li: a(href='#fakelink') Element Three
+                                                li: a(href='#fakelink') Element Three
+                                        li
+                                            a(href='#fakelink') About Us
+
+                                    form.navbar-search.form-search.pull-left(action='', align='center')
+                                        div.input-append
+                                            input.search-query.span2(type='text', placeholder='Search')
+                                            button.btn.btn-large(type='submit')
+                                                i.fui-search
+
+                                    ul.nav.pull-right
+                                        li.divider
+                                        li.dropdown
+                                            a.dropdown-toggle(href='#', data-toggle='dropdown')
+                                                | Settings
+                                                b.caret
+                                            ul.dropdown-menu
+                                                li: a(href='#fakelink') Action
+                                                li: a(href='#fakelink') Another action
+                                                li: a(href='#fakelink') Something else here
+                                                li.divider
+                                                li: a(href='#fakelink') Separated link
+
+        div.dialog.dialog-success
+            | Activation link was sent to
+            span.text-primary m***@gmail.com
+            button.btn.btn-primary.btn-wide.mll
+                i.fui-mail
+                | Resend it to me!
+
+        div.dialog
+              i.fui-mail.mrm
+              | Thank you! Your message has been sent.
+
+        div.dialog.demo-dialog
+            form.control-group
+                input.flat(type='text', placeholder='Login/E-mail')
+                input.flat(type='password', placeholder='Password')
+                button.btn.btn-primary.btn-wide Login
+                button.btn.btn-danger.btn-wide Register
+
+        div.container.ptl
+            div.demo-row.menu-row
+                h3.demo-title Bottom
+
+        div.mtl.pbl
+            div.bottom-menu.bottom-menu-inverse
+                div.container
+                    div.row
+                        div.span2.brand
+                            a.fui-flat(href='#fakelink')
+
+                        div.span8
+                            ul.bottom-links
+                                li: a(href='#fakelink') About Us
+                                li: a(href='#fakelink') Store
+                                li.active: a(href='#fakelink') Jobs
+                                li: a(href='#fakelink') Privacy
+                                li: a(href='#fakelink') Terms
+                                li: a(href='#fakelink') Follow Us
+                                li: a(href='#fakelink') Support
+                                li: a(href='#fakelink') Links
+
+                        div.span2
+                            ul.bottom-icons
+                                li: a.fui-pinterest(href='#fakelink')
+                                li: a.fui-facebook(href='#fakelink')
+                                li: a.fui-twitter(href='#fakelink')
+
+        div.bottom-menu
+            div.container
+                div.row
+                    div.span2.brand
+                        a.fui-flat(href='#fakelink')
+
+                    div.span8
+                        ul.bottom-links
+                            li: a(href='#fakelink') About Us
+                            li: a(href='#fakelink') Store
+                            li.active: a(href='#fakelink') Jobs
+                            li: a(href='#fakelink') Privacy
+                            li: a(href='#fakelink') Terms
+                            li: a(href='#fakelink') Follow Us
+                            li: a(href='#fakelink') Support
+                            li: a(href='#fakelink') Links
+
+                    div.span2
+                        ul.bottom-icons
+                            li: a.fui-pinterest(href='#fakelink')
+                            li: a.fui-facebook(href='#fakelink')
+                            li: a.fui-twitter(href='#fakelink')
+
+        div.mvl.pvl
+            div.bottom-menu.bottom-menu-large.bottom-menu-inverse
+                div.container
+                    div.row
+                        div.span2.brand
+                            a.fui-flat(href='#fakelink')
+
+                        div.span2
+                            h5.title About Us
+                            ul.bottom-links
+                                li: a(href='#fakelink') Dashboard
+                                li: a(href='#fakelink') Feed
+                                li: a(href='#fakelink') Forums
+                                li: a(href='#fakelink') Radio
+                                li: a(href='#fakelink') Journal
+                                li: a(href='#fakelink') Reader
+                                li: a(href='#fakelink') Store
+
+                        div.span2
+                            h5.title Categories
+                            ul.bottom-links
+                                li: a(href='#fakelink') Design
+                                li: a(href='#fakelink') Freebies
+                                li: a(href='#fakelink') Tutorials
+                                li: a(href='#fakelink') Coding
+                                li: a(href='#fakelink') Inspiration
+                                li: a(href='#fakelink') WordPress
+                                li: a(href='#fakelink') Resources
+
+                        div.span2
+                            h5.title Networks
+                            ul.bottom-links
+                                li: a(href='#fakelink') Insight
+                                li: a(href='#fakelink') Promotion
+                                li: a(href='#fakelink') Production
+                                li: a(href='#fakelink') Planning
+                                li: a(href='#fakelink') Journal
+                                li: a(href='#fakelink') Reader
+                                li: a(href='#fakelink') Store
+
+                        div.span2
+                            h5.title Mainframe
+                            ul.bottom-links
+                                li: a(href='#fakelink') Register / Login
+                                li.active: a(href='#fakelink') Jobs
+                                li: a(href='#fakelink') Contacts
+                                li: a(href='#fakelink') Privacy
+                                li: a(href='#fakelink') Terms of Use
+
+                        div.span2
+                            h5.title Follow Us
+                            ul.bottom-links
+                                li: a(href='#fakelink') Facebook
+                                li: a(href='#fakelink') Twitter
+                                li: a(href='#fakelink') Youtube
+                                li: a(href='#fakelink') Vimeo
+                                li: a(href='#fakelink') Instagram
+                                li: a(href='#fakelink')
+                                    | Vine&nbsp;
+                                    span.label.label-small.label-primary New
+
+        div.bottom-menu.bottom-menu-large.mbl
+            div.container
+                div.row
+                    div.span2.brand
+                        a.fui-flat(href='#fakelink')
+
+                    div.span2
+                        h5.title About Us
+                        ul.bottom-links
+                            li: a(href='#fakelink') Dashboard
+                            li: a(href='#fakelink') Feed
+                            li: a(href='#fakelink') Forums
+                            li: a(href='#fakelink') Radio
+                            li: a(href='#fakelink') Journal
+                            li: a(href='#fakelink') Reader
+                            li: a(href='#fakelink') Store
+
+                    div.span2
+                        h5.title Categories
+                        ul.bottom-links
+                            li: a(href='#fakelink') Design
+                            li: a(href='#fakelink') Freebies
+                            li: a(href='#fakelink') Tutorials
+                            li: a(href='#fakelink') Coding
+                            li: a(href='#fakelink') Inspiration
+                            li: a(href='#fakelink') WordPress
+                            li: a(href='#fakelink') Resources
+
+                    div.span2
+                        h5.title Networks
+                        ul.bottom-links
+                            li: a(href='#fakelink') Insight
+                            li: a(href='#fakelink') Promotion
+                            li: a(href='#fakelink') Production
+                            li: a(href='#fakelink') Planning
+                            li: a(href='#fakelink') Journal
+                            li: a(href='#fakelink') Reader
+                            li: a(href='#fakelink') Store
+
+                    div.span2
+                        h5.title Mainframe
+                        ul.bottom-links
+                            li: a(href='#fakelink') Register / Login
+                            li.active: a(href='#fakelink') Jobs
+                            li: a(href='#fakelink') Contacts
+                            li: a(href='#fakelink') Privacy
+                            li: a(href='#fakelink') Terms of Use
+
+                    div.span2
+                        h5.title Follow Us
+                        ul.bottom-links
+                            li: a(href='#fakelink') Facebook
+                            li: a(href='#fakelink') Twitter
+                            li: a(href='#fakelink') Youtube
+                            li: a(href='#fakelink') Vimeo
+                            li: a(href='#fakelink') Instagram
+                            li: a(href='#fakelink')
+                                | Vine&nbsp;
+                                span.label.label-small.label-primary New
+
+        div.container.ptl
+            div.demo-row.pbl.mbm
+                h3.demo-title Typography
+
+            div.demo-row.typography-row
+                div.demo-content
+                    h1
+                        span.header-note Header 1
+                        | Showers accross the
+
+            div.demo-row.typography-row
+                div.demo-content
+                    h2
+                        span.header-note Header 2
+                        | Give this quartet a few
+
+            div.demo-row.typography-row
+                div.demo-content
+                    h3
+                        span.header-note Header 3
+                        | The Vatican transitions to a
+
+            div.demo-row.typography-row
+                div.demo-content
+                    h4
+                        span.header-note Header 4
+                        | Great American Bites: Telluride's Oak, The
+
+            div.demo-row.typography-row
+                div.demo-content
+                    h5
+                        span.header-note Header 5
+                        | Author Diane Alberts loves her some good
+
+            div.demo-row.typography-row
+                div.demo-content
+                    h6
+                        span.header-note Header 6
+                        | With the success of young-adult book-to-movie
+
+            div.demo-row.typography-row
+                div.demo-content
+                    span.text-note Paragraph
+                    p
+                        | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        strong Donec ullamcorper
+                        | nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+                        | nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+            div.demo-row.typography-row
+                div.demo-content
+                    span.text-note Image
+                    img.img-rounded(src='images/example-image.jpg', atl='example-image', width='462', height='308')
+                    p.img-comment
+                        strong Note:
+                        | gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+                        | eget lacinia odio sem nec elit.
+
+            div.demo-row.typography-row
+                div.demo-content
+                    span.text-note Lead Text
+                    p.lead Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+            div.demo-row.typography-row
+                div.demo-content
+                    span.text-note Quote
+                    blockquote
+                        p
+                            | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            | Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus.
+                        small Steve Jobs, CEO Apple
+
+            div.demo-row.typography-row
+                div.demo-content
+                    span.text-note Small Font
+                    p: small
+                        | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        | Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+                        | nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+            div.demo-row.demo-illustrations
+                div.demo-title
+                    h3.demo-panel-title Icons
+
+                div.demo-content-wide
+                    div: img(src='images/icons/Camera@2x.png', alt='')
+                    div: img(src='images/icons/Arrow@2x.png', alt='')
+                    div: img(src='images/icons/Dude@2x.png', alt='')
+                    div: img(src='images/icons/Banner@2x.png', alt='')
+                    div: img(src='images/icons/Yin-and-Yang@2x.png', alt='')
+                    div: img(src='images/icons/Calendar@2x.png', alt='')
+                    div: img(src='images/icons/Bulb@2x.png', alt='')
+                    div: img(src='images/icons/Card@2x.png', alt='')
+                    div: img(src='images/icons/Chat@2x.png', alt='')
+                    div: img(src='images/icons/Clipboard@2x.png', alt='')
+                    div: img(src='images/icons/Book@2x.png', alt='')
+                    div: img(src='images/icons/Compass@2x.png', alt='')
+                    div: img(src='images/icons/Earth@2x.png', alt='')
+                    div: img(src='images/icons/Egg@2x.png', alt='')
+                    div: img(src='images/icons/File@2x.png', alt='')
+                    div: img(src='images/icons/Gift-Box@2x.png', alt='')
+                    div: img(src='images/icons/Games@2x.png', alt='')
+                    div: img(src='images/icons/Girl@2x.png', alt='')
+                    div: img(src='images/icons/Goal@2x.png', alt='')
+                    div: img(src='images/icons/Graph@2x.png', alt='')
+                    div: img(src='images/icons/Infinity-Loop@2x.png', alt='')
+                    div: img(src='images/icons/Key@2x.png', alt='')
+                    div: img(src='images/icons/Letter-Symbol@2x.png', alt='')
+                    div: img(src='images/icons/Magic-Mouse@2x.png', alt='')
+                    div: img(src='images/icons/Magic@2x.png', alt='')
+                    div: img(src='images/icons/Mail@2x.png', alt='')
+                    div: img(src='images/icons/Map@2x.png', alt='')
+                    div: img(src='images/icons/Money@2x.png', alt='')
+                    div: img(src='images/icons/Mortarboard@2x.png', alt='')
+                    div: img(src='images/icons/Mountain@2x.png', alt='')
+                    div: img(src='images/icons/Pencil@2x.png', alt='')
+                    div: img(src='images/icons/Pencils@2x.png', alt='')
+                    div: img(src='images/icons/Pocket@2x.png', alt='')
+                    div: img(src='images/icons/Responsive@2x.png', alt='')
+                    div: img(src='images/icons/Retina-Ready@2x.png', alt='')
+                    div: img(src='images/icons/Search@2x.png', alt='')
+                    div: img(src='images/icons/Settings@2x.png', alt='')
+                    div: img(src='images/icons/Shield@2x.png', alt='')
+                    div: img(src='images/icons/Spaceship@2x.png', alt='')
+                    div: img(src='images/icons/Toilet-Paper@2x.png', alt='')
+                    div: img(src='images/icons/Touch@2x.png', alt='')
+                    div: img(src='images/icons/Trip-Bag@2x.png', alt='')
+                    div: img(src='images/icons/Umbrella@2x.png', alt='')
+                    div: img(src='images/icons/Watches@2x.png', alt='')
+                    div: img(src='images/icons/Wine@2x.png', alt='')
+                    div: img(src='images/icons/Box@2x.png', alt='')
+                    div: img(src='images/icons/iPhone@2x.png', alt='')
+                    div: img(src='images/icons/iPad@2x.png', alt='')
+                    div: img(src='images/icons/iMac@2x.png', alt='')
+                    div: img(src='images/icons/MacBook-Pro@2x.png', alt='')
+
+        // Load JS here for greater good
+        script(src='js/flatUi/jquery-1.8.3.min.js')
+        script(src='js/flatUi/jquery-ui-1.10.3.custom.min.js')
+        script(src='js/flatUi/jquery.ui.touch-punch.min.js')
+        script(src='js/flatUi/bootstrap.min.js')
+        script(src='js/flatUi/bootstrap-select.js')
+        script(src='js/flatUi/bootstrap-switch.js')
+        script(src='js/flatUi/flatui-checkbox.js')
+        script(src='js/flatUi/flatui-radio.js')
+        script(src='js/flatUi/jquery.tagsinput.js')
+        script(src='js/flatUi/jquery.placeholder.js')
+        script(src='js/flatUi/jquery.stacktable.js')
+        script(src='js/flatUi/application.js')

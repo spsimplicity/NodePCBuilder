@@ -1,5 +1,51 @@
-extends layout
+doctype 5
+html
+    head
+        meta(charset='utf08')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-block content
-  h1= title
-  p Welcome to #{title}
+        title= title
+
+        include templates/flatCss
+
+    body(ng-app='cpgApp')
+        div.navWrap(ng-controller="NavCtrl")
+            div.loggedOutNav(ng-hide='navState')
+                div.container
+                    button.btn.btn-navbar.pull-right.fui-list(type='button', data-toggle='collapse', data-target='#collapseLoggedOut')
+                    a.brand.pull-left(href='/') CPG
+                    div.nav-collapse.collapse.cpgNavCollapse#collapseLoggedOut
+                        ul.nav.pull-right
+                            li.email: div.control-group
+                                input(type='text', placeholder='Email')
+                            li.pass: div.control-group
+                                input(type='password', placeholder='Password')
+                            li.login: button.btn.btn-success Login
+                            li.register
+                                button.btn.btn-danger Register
+                                a.forgot(ng-click='navState = true') Forgot Pass?
+            div.forgotPassword(ng-show='navState')
+                div.container
+                    button.btn.btn-navbar.pull-right.fui-list(type='button', data-toggle='collapse', data-target='#collapseForgot')
+                    a.brand.pull-left(href='/') CPG
+                    div.nav-collapse.collapse.cpgNavCollapse#collapseForgot
+                        ul.nav.pull-right
+                            li.email: div.control-group
+                                input(type='text', placeholder='Email')
+                            li.request
+                                button.btn.btn-success Request Password
+                                a.sign(ng-click='navState = false') Login
+
+        div.container: div.adSpace
+
+        div.container
+            div.search
+
+            div.submit
+
+        div.container: div.adSpace
+
+        include templates/angularJs
+        script(src='js/angular/controllers/loginCtrl.js')
+        script(src='js/angular/cpgApp.js')
+        include templates/flatJs

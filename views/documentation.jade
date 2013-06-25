@@ -1,0 +1,219 @@
+doctype 5
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        title= title
+
+        // Loading Bootstrap
+        link(rel='stylesheet', href='/styles/lib/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='/styles/lib/bootstrap/css/bootstrap-responsive.css')
+
+        // Loading Flat UI
+        link(rel='stylesheet', href='/styles/css/flat-ui.css')
+
+        // Favicon
+        link(rel='shortcut icon', href='images/favicon.ico')
+
+        // HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.
+        //if lt IE 9
+            script(src='/js/flatUi/html5shiv.js')
+    body
+        h1.demo-headline Documentation
+        div.container
+            div.demo-row
+                div.demo-title
+                    h3 What is Flat UI?
+
+                div.demo-content.demo-content-article
+                    p
+                        a(href='http://designmodo.com/flat', target='_blank') Flat UI
+                        | is a beautiful theme for
+                        a(href='httpL//getbootstrap.com', target='_blank') Bootstrap.
+                        | We redesigned many of it's components to look flat in every pixel.
+                    p
+                        | However, to make form and some other
+                        | elements look exactly how we want we ended up using JS plugins which means it requires a little more
+                        | efforts integrating them into your project.
+
+            div.demo-row
+                div.demo-title
+                    h3 How to Use It?
+
+                div.demo-content.demo-content-article
+                    p
+                        | Since it is built on top of Bootstrap as a theme you can use it on your project with Bootstrap (tested on
+                        a href="http://github.com/twitter/bootstrap/tree/v2.3.2" target="_blank">2.3.2</a>
+                        a(href='http;//github.com/twitter/bottostrap/tree/v2.3.2', target='_blank') 2.3.2
+                        | ). We did not modify any line of Bootstrap so you will be safe using Flat UI in your ongoing project
+                        | (unless you hacked it :)
+                    p
+                        | We provide you with CSS and
+                        a(href='http://lesscss.org/', target='_blank') Less
+                        | sources.
+                        br
+                        | 1. Using CSS is as easy as dropping
+                        code css/flat-ui.css
+                        | to your project folder and including it in your template/html page:
+                        code &lt;link href="css/flat-ui.css" rel="stylesheet"&gt;
+                    p
+                        | 2. Use Less if you want to modify/extend Flat UI in your project. We built it Bootstrap way so
+                        | you won't find big difference.
+                    p
+                        | The easiest way to start is by using our
+                        a(href='template.html')start-up template
+                        | where all files are already included
+                        | and ready to be used (JS plugins are included, but not initialized for no need).
+
+            div.demo-row
+                div.demo-title
+                    h3 File Structure
+
+                div.demo-content.demo-content-article
+                    p
+                        | Once purchased, unzip the compressed archive to see the structure:
+                        pre.prettyprint
+                            | flat-ui/
+                            span.muted ├──</span> bootstrap/
+                            span.muted ├──</span> css/
+                            span.muted │   └──</span> flat-ui.css
+                            span.muted ├──</span> fonts/
+                            span.muted ├──</span> images/
+                            span.muted ├──</span> js/
+                            span.muted └──</span> less/
+                            span.muted ├──</span> config.less
+                            span.muted ├──</span> flat-ui.less
+                            span.muted ├──</span> icon-font.less
+                            span.muted ├──</span> mixins.less
+                            span.muted ├──</span> spaces.less
+                            span.muted └──</span> modules/
+
+                    p Let's go from top to the bottom of this list.
+
+                    p
+                        strong bootstrap/
+                        | &mdash; as you can guess this is a folder where all original
+                        | Bootstrap files are (untouched). Before using our theme please make sure you didn't modify
+                        | anything that can break compatibility: paddings, margins, etc.
+                        br
+                        em.text-info Note
+                        | : you can modify
+                        code variables.less
+                        | safely.
+
+                    p
+                        strong css/
+                        | &mdash; compiled Flat UI CSS. If you like everything and don't want
+                        | to change the look of our components it is better to use CSS version. This is an easiest
+                        | way to start using Flat UI.
+
+                    p
+                        strong fonts/
+                        | &mdash; yes, this is an icon font. When integrating make sure you
+                        | copied all font files correctly. You might want to change/add glyphs. If so, open
+                        a(href='http://icomoon.io/app')IcoMoon
+                        | and import
+                        code icomoon-session.json
+                        | there to make all glyhps editable.
+
+                    p
+                        img(src='http://take.ms/wzfgEz', alt='')
+
+                    p
+                        strong images/
+                        | &mdash; unfortunately we should use them in few cases. The rest
+                        | is in&nbsp;the&nbsp;glyphs.
+
+                    p
+                        strong js/
+                        | &mdash; we tried hard to make our components all look true Flat. To do
+                        | so we used JS plugins. Most of them are well known, some of them not. The most JS-ified part
+                        | is form components: checkboxes, radios, switches, selects since it is not currently possible
+                        | to style them identically in all browsers. Open
+                        code application.js
+                        | for integration examples.
+
+                    p
+                        strong less/
+                        | &mdash; where all our stylesheets are (not preprocessed).
+
+                    ul
+                        li
+                            code config.less
+                            | is where all variables are.
+                        li
+                            code flat-ui.less
+                            | links everything into one single bundle.
+                        li
+                            code icon-font.less
+                            | makes all icon glyphs work. Converted by
+                            a(href='http://icomoon.io')IcoMoon
+                            | .
+                        li
+                            code mixins.less
+                            | helps automating things. Feel free to add yours here.
+                        li
+                            code modules/
+                            | is where all components are. If you want to add yours create
+                            | module-name.less here. Name it as a class name if possible.
+
+            div.demo-row
+                div.demo-title
+                    h3 New Components
+
+                div.demo-content.demo-content-article
+                    ul
+                        li
+                            code bottom.less
+                            | Bottom menus and footer.
+                        li
+                            code checkbox-and-radio.less
+                            | Custom checkboxes and radios.
+                        li
+                            code dialog.less
+                            | Used for system messages.
+                        li
+                            code iconbar.less
+                            | Icon bar (another navigation type).
+                        li
+                            code select.less
+                            | Custom selects.
+                        li
+                            code switch.less
+                            | Custom switch.
+                        li
+                            code tagsinput.less
+                            | Tags input field.
+                        li
+                            code ui-datepicker.less
+                            | Datepicker widget.
+                        li
+                            code ui-slider.less
+                            | Range slider.
+                        li
+                            code ui-spinner.less
+                            | Text input with increment/decrement.
+
+            div.demo-row
+                div.demo-title
+                    h3 Components restyled
+
+                div.demo-content.demo-content-article
+                    ul
+                        li: code alerts.less
+                        li: code breadcrumbs.less
+                        li: code buttons.less
+                        li: code caret.less
+                        li: code dropdown.less
+                        li: code input.less
+                        li: code label-badges.less
+                        li: code nav.less
+                        li: code navbar.less
+                        li: code pager.less
+                        li: code pagination.less
+                        li: code popover.less
+                        li: code progress.less
+                        li: code tables.less
+                        li: code tooltip.less
+                        li: code type.less
