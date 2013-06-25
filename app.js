@@ -9,7 +9,8 @@
 
 var express = require('express'),
     routes =  require('./routes'),
-    https =    require('https'),
+    flat =    require('./routes/flatDocs'),
+    https =   require('https'),
     fs =      require('fs'),
     path =    require('path');
 
@@ -39,6 +40,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/flatDoc', flat.documentation);
+app.get('/flatDemo', flat.flatIndex);
 
 https.createServer(sshOptions, app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
