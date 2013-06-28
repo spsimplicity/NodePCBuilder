@@ -5,19 +5,29 @@
  *  express
  *  https
  *  path
+ *  fs
+ *  mongoose
  */
 
-var express = require('express'),
-    routes =  require('./routes'),
-    flat =    require('./routes/flatDocs'),
-    https =   require('https'),
-    fs =      require('fs'),
-    path =    require('path');
+var express =    require('express'),
+    nodeMailer = require('nodemailer'),
+    routes =     require('./routes'),
+    flat =       require('./routes/flatDocs'),
+    userFunc =   require('./routes/userFunc.js'),
+    https =      require('https'),
+    fs =         require('fs'),
+    path =       require('path');
 
+// Setup ssh keys
 var sshOptions = {
     key: fs.readFileSync('./keys/pcKey.pem'),
     cert: fs.readFileSync('./keys/pcKeyCert.pem')
 };
+
+// Connect to MongoDB
+var mongoose = require('mongoose'),
+    db = mongoose.connect('mongodb://localhost/pcbuilder');
+
 var app = express();
 
 // all environments
@@ -39,9 +49,19 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Root
 app.get('/', routes.index);
+
+// Flat UI pages
 app.get('/flatDoc', flat.documentation);
 app.get('/flatDemo', flat.flatIndex);
+
+// User function pages
+app.get('/user/login', userFunc);
+app.get('/user/register', userFunc);
+app.get('/user/forgotPassword', userFunc);
+app.get('/user/resetPassword', userFunc);
+app.post('/user/resetPassword', userFunc);
 
 https.createServer(sshOptions, app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
