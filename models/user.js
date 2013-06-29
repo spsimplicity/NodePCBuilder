@@ -60,9 +60,9 @@ module.exports = function(mongoose, mongooseValidator, sanitizer, nodemailer) {
     };
 
     // Send email to user with password reset url
-    var forgotPassword = function(username, resetPassUrl, callback) {
+    var forgotPassword = function(email, resetPassUrl, callback) {
 
-        User.findOne({username: sanitizeInput(username)}, function(err, userDoc) {
+        User.findOne({username: sanitizeInput(email)}, function(err, userDoc) {
             if(err) {
                 callback(err);
             } else {
@@ -77,7 +77,7 @@ module.exports = function(mongoose, mongooseValidator, sanitizer, nodemailer) {
                     }
                 });
 
-                resetPassUrl += '?account=' + userDoc._id;
+                resetPassUrl += '?account=' + userDoc._id + '&num=' + userDoc.created;
 
                 // Send email to user's email account
                 smtpTransport.sendMail({

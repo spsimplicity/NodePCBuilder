@@ -15,7 +15,7 @@ var express =    require('express'),
     nodeMailer = require('nodemailer'),
     routes =     require('./routes'),
     flat =       require('./routes/flatDocs'),
-    userFunc =   require('./routes/userFunc.js'),
+    userFunc =   require('./routes/userFunc'),
     https =      require('https'),
     fs =         require('fs'),
     path =       require('path'),
@@ -23,14 +23,18 @@ var express =    require('express'),
 
 // Setup ssh keys
 var sshOptions = {
-    key: fs.readFileSync('./keys/pcKey.pem'),
+    key:  fs.readFileSync('./keys/pcKey.pem'),
     cert: fs.readFileSync('./keys/pcKeyCert.pem')
 };
 
 // Connect to MongoDB
 var mongoose = require('mongoose'),
-    mongoValidate = require('mongoose-validator').validate,
+    mongooseValidate = require('mongoose-validator').validate,
     db = mongoose.connect('mongodb://localhost/pcbuilder');
+
+var dataModels = {
+    User: require('./models/user')(mongoose, mongooseValidate, sanitizer, nodeMailer)
+};
 
 var app = express();
 
@@ -61,11 +65,11 @@ app.get('/flatDoc', flat.documentation);
 app.get('/flatDemo', flat.flatIndex);
 
 // User function pages
-app.get('/user/login', userFunc);
-app.get('/user/register', userFunc);
-app.get('/user/forgotPassword', userFunc);
-app.get('/user/resetPassword', userFunc);
-app.post('/user/resetPassword', userFunc);
+app.get('/user/login', userFunc.login(dataModels.User));
+app.get('/user/register', userFunc.register(dataModels.User));
+app.get('/user/forgotPassword', userFunc.forgotPass(dataModels.User));
+app.get('/user/resetPassword', userFunc.resetPassPage);
+app.post('/user/resetPassword', userFunc.resetPassSubmit(dataModels.User));
 
 https.createServer(sshOptions, app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
