@@ -6,7 +6,9 @@
  *  https
  *  path
  *  fs
+ *  validator
  *  mongoose
+ *  mongoose-validator
  */
 
 var express =    require('express'),
@@ -16,7 +18,8 @@ var express =    require('express'),
     userFunc =   require('./routes/userFunc.js'),
     https =      require('https'),
     fs =         require('fs'),
-    path =       require('path');
+    path =       require('path'),
+    sanitizer =  require('validator').sanitize;
 
 // Setup ssh keys
 var sshOptions = {
@@ -26,6 +29,7 @@ var sshOptions = {
 
 // Connect to MongoDB
 var mongoose = require('mongoose'),
+    mongoValidate = require('mongoose-validator').validate,
     db = mongoose.connect('mongodb://localhost/pcbuilder');
 
 var app = express();
