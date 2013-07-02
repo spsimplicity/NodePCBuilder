@@ -8,7 +8,7 @@
  * @returns {{User: mongoose.model, changePassword: Function, forgotPassword: Function, login: Function, register: Function, addComputer: Function}}
  */
 
-module.exports = function(mongoose, mongooseValidator, sanitizer, nodemailer) {
+exports.User = function(mongoose, mongooseValidator, sanitizer, nodemailer) {
     var crypto = require('crypto'); // Include the crypto module to encrypt passwords
     var salt = "19880706AriellaWilk"; // Password salt to further obfuscate the real word (I love my girlfriend)
 

@@ -33,7 +33,7 @@ var mongoose = require('mongoose'),
     db = mongoose.connect('mongodb://localhost/pcbuilder');
 
 var dataModels = {
-    User: require('./models/user')(mongoose, mongooseValidate, sanitizer, nodeMailer)
+    User: require('./models/user').User(mongoose, mongooseValidate, sanitizer, nodeMailer)
 };
 
 var app = express();
