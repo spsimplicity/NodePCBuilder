@@ -7,11 +7,11 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.2.6",
+    "express": "*",
     "jade": "*",
     "less-middleware": "*",
-    "mongoose": "~3.6.11",
-    "nodemailer": "~0.4.4",
+    "mongoose": "*",
+    "nodemailer": "*",
     "mongoose-validator": "*",
     "validator": "*"
   }

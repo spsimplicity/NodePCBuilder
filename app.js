@@ -28,9 +28,9 @@ var sshOptions = {
 };
 
 // Connect to MongoDB
-var mongoose = require('mongoose'),
+var mongoose =         require('mongoose'),
     mongooseValidate = require('mongoose-validator').validate,
-    db = mongoose.connect('mongodb://localhost/pcbuilder');
+    db = mongoose.connect('mongodb://localhost:27017/PCBuilder');
 
 var dataModels = {
     User: require('./models/user').User(mongoose, mongooseValidate, sanitizer, nodeMailer)
@@ -54,7 +54,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
+}
+if ('test' == app.get('env')) {
+    app.use(express.errorHandler());
+}
+if ('production' == app.get('env')) {
 }
 
 // Root
@@ -72,5 +77,5 @@ app.get('/user/resetPassword', userFunc.resetPassPage);
 app.post('/user/resetPassword', userFunc.resetPassSubmit(dataModels.User));
 
 https.createServer(sshOptions, app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+    console.log('Express server listening on port ' + app.get('port'));
 });
